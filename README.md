@@ -3,4 +3,4 @@ Flutter Custom Widgets,and their elements are highly customizable and work with 
 
 | Demo                                                                      |  Renderings                                                                                                        
 | ------------------------------------------------------------------------  |  -----------------------------------------------------------------------------------------------------------  
-| [expanded_section_widget           ](Flutter-Custom-Widgets/expanded_section_widget)           |  ![expanded_section_widget            ](Flutter-Custom-Widgets/expanded_section_widget/Text-SwiftUI.gif)
+| [expanded_section_widget           ](Flutter-Custom-Widgets/expanded_section_widget)           |  ![expanded_section_widget            ](Flutter-Custom-Widgets/expanded_section_widget/output/expanded.gif)
