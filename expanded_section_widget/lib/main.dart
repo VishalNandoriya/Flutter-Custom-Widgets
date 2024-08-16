@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'ExpandedSectionWidget.dart';
 import 'TextWidget.dart';
+import 'mock_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,13 +30,7 @@ class SectionList extends StatefulWidget {
 }
 
 class _SectionListState extends State<SectionList> {
-  final listMap = {
-    "Section-1": ["Row-1", "Row-2", "Row-3"],
-    "Section-2": ["Row-1", "Row-2", "Row-3"],
-    "Section-3": ["Row-1", "Row-2", "Row-3"],
-    "Section-4": ["Row-1", "Row-2", "Row-3"],
-    "Section-5": ["Row-1", "Row-2", "Row-3"],
-  };
+  final list = MockData.getData();
 
   @override
   Widget build(BuildContext context) {
@@ -46,18 +41,16 @@ class _SectionListState extends State<SectionList> {
       ),
       body: ListView(
         children: List.generate(
-          listMap.length,
+          list.length,
           (index) => ExpandedSectionWidget(
               initiallyExpanded: index == 0,
-              title: listMap.keys.elementAt(index),
+              title: list[index].sectionName,
               childrenPadding: const EdgeInsets.symmetric(
                 horizontal: 16,
                 vertical: 8,
               ),
-              children: listMap.values
-                  .elementAt(index)
-                  .map((e) => ItemWidget(title: e))
-                  .toList()),
+              children:
+                  list[index].items.map((e) => ItemWidget(title: e)).toList()),
         ),
       ),
     );
